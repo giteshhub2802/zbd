@@ -1,0 +1,247 @@
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: red;
+  left: 0;
+  top: 0;
+  transform: rotate(-45deg);
+  animation: floatUp 2s linear forwards;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -15px;
+  left: 0;
+}
+
+.heart::after {
+  left: 15px;
+  top: 0;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-200px) scale(1.2) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+
+:root {
+    --pink: #ff6b9d;
+    --dark-pink: #d81b60;
+    --gold: #ffd700;
+}
+
+/* body {
+    margin: 0;
+    background: #fff0f5;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.left-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.right-content img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: var(--dark-pink);
+}
+.photo-frame {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height : 800px;
+  margin: 0 auto;
+  background: white;
+  border: 10px solid #f1f1f1;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.framed-photo {
+  position: absolute;
+  width: 350px;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+page-container {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #c2185b;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', cursive;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #444;
+  margin: 10px 20px;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+}
+
+.photo-frame img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#mainMessage {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin-top: 20px;
+}
+
+h1, h2 {
+  color: #d81b60;
+  margin: 10px 0;
+}
+
+.heart-container {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10px;
+}
+.btn {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+
+.btn {
+    background: linear-gradient(45deg, var(--pink), var(--dark-pink));
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 15px;
+}
+
+/* Heart animation styles */
+.heart {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--pink);
+    transform: rotate(45deg);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    .photo-frame { width: 220px; height: 220px; }
+}
+/* Pounding Heart */
+.heart-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  animation: heartbeat 1.5s infinite;
+  opacity: 0.3;
+  z-index: -1;
+}
+@keyframes heartbeat {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  25% { transform: translate(-50%, -50%) scale(1.1); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
+  75% { transform: translate(-50%, -50%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+reveal-message {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#typedMessage {
+  font-size: 18px;
+  color: #d81b60;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+}
