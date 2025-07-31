@@ -1,2 +1,2 @@
 # zbd
-pesrsonal project
+personal project
