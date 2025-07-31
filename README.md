@@ -1,2 +1,2 @@
 # zbd
-pesrsonal poprject
+pesrsonal prorject
