@@ -1,2 +1,2 @@
 # zbd
-pesrsonal prorject
+pesrsonal project
