@@ -1,146 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday My Love ❤️</title>
-    <link rel="stylesheet" href="zbd.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <!-- <img src="your-photo.jpg" alt="Our Photo"> -->
-</head>
-<!-- Add this at the VERY TOP of <body> -->
-<audio id="bgMusic" loop hidden>
-  <source src="a-small-miracle-132333.mp3" type="audio/mpeg">
-</audio>
-<button id="musicBtn" style="position:fixed; top:20px; right:20px; z-index:1000; background:pink; border:none; padding:10px; border-radius:50%; cursor:pointer;">🎵</button>
-
-<body>
-   
-<!-- Add this right after opening <body> -->
-<div class="heart-container">❤️</div>
-    <div class="container">
-        <header>
-            <style>
-    body {
-      text-align: center;
-      background-color: #fff5f5;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      color: crimson;
-    }
-    img {
-      width: 300px;
-      border-radius: 12px;
-    }
-    audio {
-      margin-top: 20px;
-    }
-    .controls {
-      margin-top: 10px;
-    }
-    button {
-      margin: 5px;
-      padding: 8px 16px;
-      background-color: crimson;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Love!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="zbd.css">
 </head>
 <body>
-            <h1>Happy Birthday, My Love!</h1>
-            <div class="photo-frame">
-                <!-- Replace with your photo -->
-                <img src="zbd.jpg" alt="A woman with long dark hair wearing a black top and blue jeans sits cross-legged on a bed, holding a phone and taking a mirror selfie. The room has white curtains, a purple headboard, and a framed painting on the wall. The atmosphere is relaxed and cheerful." class="framed-photo">
-            </div>
-           <div class="controls">
-    <audio id="player" autoplay>
-      <source src="a-small-miracle-132333.mp3" type="audio/mpeg">
-      <source src="a-small-miracle-132333.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <br>
-    <button onclick="togglePlay()">Play/Pause</button>
-    <button onclick="nextSong()">Next Song</button>
-  </div>
+    <div class="beating-heart"></div>
 
-  <script>
-    const songs = ["a-small-miracle-132333.mp3"]; // Add your song file names here
-    let current = 0;
-    const player = document.getElementById("player");
+<img src="zbd.jpg" alt="Her Photo" class="girl-image">
 
-    function togglePlay() {
-      if (player.paused) {
-        player.play();
-      } else {
-        player.pause();
-      }
-    }
+  <main class="main-container">
+    <h1 class="title">Happy Birthday, My Love!</h1>
 
-    function nextSong() {
-      current = (current + 1) % songs.length;
-      player.src = songs[current];
-      player.play();
-    }
+    <div class="heart-beat">❤️</div>
 
-    // Optional: autoplay next song when current ends
-    player.addEventListener("ended", nextSong);
-  </script>
-  
-        
-        <div class="message" id="mainMessage">
-            <h2>To The Most Amazing Woman I Know</h2>
-            <p>you are a blessing from lord you deserve every happiness your deserve everything when you came into my life it was so miraculous that all my sufferings and hard ships ended and my life become joyfull sorry babes for the way i am the way i hurt you and treat you but i am trying to be the best man for my queen the one who was chosen by lord for me happy bday love a little surprise for you from me </p>
-           <br> <p>the one an only girl i endore and see my better half with cuteness boldness and intelligence with so beautiful smile even glaciers can melt by seeing her </p>
-            <h2>love youuuuuuuuuuuuu</h2>
-        </div>
-        
-        <button class="btn" id="heartsBtn">my Heart for you </button>
-        <!-- <button class="btn" id="memoriesBtn">click here &#128149;</button> -->
-         <div class="button-container">
-  <button class="btn" onclick="startTyping()">Click to reveal❤️</button>
-  <p id="typedMessage"></p>
-</div>
-<div class="reveal-message">
-  <!-- <button onclick="startTyping()">Click to reveal my words 💌</button>
-  <p id="typedMessage"></p> -->
-  <script>
-  const message = `You are my miracle, the most beautiful chapter of my life.\n
-When I see you smile, the world pauses.\n
-Every word you say, every look you give — it's etched in my heart.\n
-I don’t need a perfect life, just moments with you.\n
-And I promise to keep cherishing you, always. 💖`;
+    <img src="zbd.jpg" alt="Her Image" class="love-image">
 
-  let i = 0;
+    <h2 class="subtitle">To The Most Amazing Woman I Know</h2>
+    <p class="paragraph">
+      You are a blessing from God. You walked into my life like sunshine and made everything bloom.<br><br>
+      You deserve every joy, every smile, and every bit of happiness. I don’t need a perfect relationship.
+      I just need someone who’ll never give up on me. I’m so thankful for the love we share, the moments we create,
+      and the life we’re building together.<br><br>
+      You’re the one I want to hold at my lowest, laugh with at my highest, and grow old with forever.<br>
+      Thank you for being you.
+    </p>
 
-  function startTyping() {
-    const target = document.getElementById("typedMessage");
-    target.innerHTML = "";
-    i = 0;
-    typeLine();
-
-    function typeLine() {
-      if (i < message.length) {
-        target.innerHTML += message.charAt(i);
-        i++;
-        setTimeout(typeLine, 50); // Speed of typing (lower = faster)
-      }
-    }
-  }
-</script>
-</div>
-        <div class="clickhere-container" id="clickhere-Container">
-            <!-- Filled by JavaScript -->
-        </div>
-        
-        <footer>
-            Made with love for you ❤️
-        </footer>
+    <div class="button-group">
+      <button class="btn pink" onclick="showHearts()">My Heart is for You ❤️</button>
+      <button class="btn red" onclick="showSurprisePopup()">Surprise 🎁</button>
     </div>
 
-    <script src="zbd.js"></script>
+    <div class="heart-shower"></div>
+    <audio id="bgm" src="a-small-miracle-132333.mp3"></audio>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <p id="popupText"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="zbd.js"></script>
 </body>
 </html>
+
+      
+     
+     
+
