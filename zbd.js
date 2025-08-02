@@ -1,78 +1,47 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Hearts button
-    document.getElementById('heartsBtn').addEventListener('click', function() {
-        for (let i = 0; i < 50; i++) {
-            setTimeout(createHeart, i * 100);
-        }
-    });
-
-    // Memories button
-    document.getElementById('memoriesBtn').addEventListener('click', showMemories);
-});
-
-function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.top = (Math.random() * 100 + 100) + 'vh';
-    heart.style.width = (Math.random() * 20 + 10) + 'px';
-    heart.style.height = heart.style.width;
-    
-    document.body.appendChild(heart);
-    
-    setTimeout(() => heart.remove(), 5000);
-}
-
-function showMemories() {
-    const memories = [
-        { 
-            img: "memory1.jpg", 
-            text: "Our first date at the beach" 
-        },
-        // Add more memories here
-    ];
-    
-    const container = document.getElementById('memoryContainer');
-    container.innerHTML = '';
-    
-    memories.forEach(memory => {
-        const card = document.createElement('div');
-        card.className = 'memory-card';
-        card.innerHTML = `
-            <img src="${memory.img}" alt="Memory">
-            <p>${memory.text}</p>
-        `;
-        container.appendChild(card);
-    });
-}
-// Music Control
-const bgMusic = document.getElementById('bgMusic');
-const musicBtn = document.getElementById('musicBtn');
-
-musicBtn.addEventListener('click', () => {
-  if (bgMusic.paused) {
-    bgMusic.play();
-    musicBtn.textContent = '🔊';
-  } else {
-    bgMusic.pause();
-    musicBtn.textContent = '🔇';
+function showHearts() {
+  const shower = document.querySelector('.heart-shower');
+  for (let i = 0; i < 30; i++) {
+    let heart = document.createElement('div');
+    heart.className = 'heart-float';
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.top = Math.random() * 100 + '%';
+    heart.innerText = '❤️';
+    shower.appendChild(heart);
+    setTimeout(() => heart.remove(), 3000);
   }
-});
 
-// Optional: Auto-play when user interacts (works in most browsers)
-document.addEventListener('click', () => {
-  bgMusic.play().catch(e => console.log("Auto-play blocked"));
-}, { once: true });
-// ...existing code...
-document.getElementById('heartsBtn').addEventListener('click', function() {
-  const heart = document.createElement('div');
-  heart.className = 'heart';
-  heart.style.left = Math.random() * 90 + 'vw';
-  heart.style.top = '80vh';
-  document.querySelector('.heart-container').appendChild(heart);
-  setTimeout(() => heart.remove(), 2000);
-});
+  const audio = document.getElementById('bgm');
+  if (audio.paused) {
+    audio.play();
+  }
+}
 
+const surpriseLines = [
+  "You're the reason my world lights up 💖",
+  "Every moment with you is special 💫",
+  "You make me believe in magic and love ✨",
+  "This heart is forever yours ❤️",
+  "Happy Birthday to the queen of my life 👑"
+];
+let currentLine = 0;
 
-// ...existing code...
+function showSurprisePopup() {
+  const popup = document.getElementById('popup');
+  const text = document.getElementById('popupText');
+  popup.style.display = 'block';
+  currentLine = 0;
+  text.innerText = '';
+  revealNextLine(text);
+}
+
+function revealNextLine(element) {
+  if (currentLine < surpriseLines.length) {
+    element.innerText += surpriseLines[currentLine++] + '\n';
+    setTimeout(() => revealNextLine(element), 1500);
+  }
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
