@@ -1,5 +1,5 @@
 # zbd
 personal project
-git add .
-git commit -m "Updated code with new changes"
-git push origin main  # or your branch name
+git add.
+git commit -m "Updated code in index.html,zbd.css and zbd.js"
+git push origin main
