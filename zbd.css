@@ -30,7 +30,7 @@ body {
   color: #444;
 }
 .love-image {
- max-width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 50%;
@@ -173,6 +173,7 @@ body {
     margin-bottom:10px;
     }
 }
+
 
 
 
