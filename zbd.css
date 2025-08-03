@@ -127,5 +127,15 @@ body {
   cursor: pointer;
   color: #cc005f;
 }
+@media(max-width:600px){
+  .low-image{
+    width:120px;
+    height:120px; 
+  }
+  .paragraph{
+    max-width: 90%;
+  }
+
+
 
 
