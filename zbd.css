@@ -30,13 +30,15 @@ body {
   color: #444;
 }
 .love-image {
-  width: 160px;
-  height: 160px;
-  object-fit: center-cover;
+ max-width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #ff4d6d;
-  margin: 1rem auto;
+  border-width: 4px solid #ff4d6d;
+  border-style: solid;
+  margin: 20px auto 0;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  display: block;
 }
 .button-group {
   margin-top: 2rem;
@@ -131,6 +133,9 @@ body {
     body {
         padding: 15px;
     }
+  .love-image{
+  margin-top: 20px;
+}
 
     .container h1 {
         font-size: 28px;
@@ -163,7 +168,12 @@ body {
     .buttons button {
         width: 100%;
     }
+  .heart-beat{
+      font-size: 30px;
+    margin-bottom:10px;
+    }
 }
+
 
 
 
